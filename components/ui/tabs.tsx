@@ -5,14 +5,14 @@ import { cn } from "@/lib/utils";
 export const Tabs = TabsPrimitive.Root;
 
 export function TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.List>) {
-  return <TabsPrimitive.List className={cn("flex max-w-fit flex-wrap gap-2 rounded-full bg-surface-container-low p-1.5", className)} {...props} />;
+  return <TabsPrimitive.List className={cn("flex w-full max-w-fit gap-2 overflow-x-auto rounded-full bg-surface-container-low p-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden", className)} {...props} />;
 }
 
 export function TabsTrigger({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
   return (
     <TabsPrimitive.Trigger
       className={cn(
-        "rounded-full px-space-md py-2 font-label text-label-md text-on-surface-variant transition-all duration-200 hover:text-on-surface active:scale-[0.97] data-[state=active]:bg-primary data-[state=active]:text-on-primary data-[state=active]:shadow-md",
+        "shrink-0 whitespace-nowrap rounded-full px-space-md py-2 font-label text-label-md text-on-surface-variant transition-all duration-200 hover:text-on-surface active:scale-[0.97] data-[state=active]:bg-primary data-[state=active]:text-on-primary data-[state=active]:shadow-md",
         className,
       )}
       {...props}

@@ -123,9 +123,9 @@ export function Hero() {
       </Reveal>
 
       <Reveal delay={100} className="mt-8 w-full max-w-xl">
-        <div className="flex w-full items-center justify-between gap-4 rounded-full bg-surface-container px-5 py-2.5 shadow-md transition-shadow duration-300 hover:shadow-lg md:gap-8">
+        <div className="flex w-full flex-col items-stretch gap-4 rounded-lg bg-surface-container p-4 shadow-md transition-shadow duration-300 hover:shadow-lg sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:rounded-full sm:px-5 sm:py-2.5">
           <div className="flex items-center gap-3">
-            <div className="flex -space-x-2">
+            <div className="flex shrink-0 -space-x-2">
               {images.team.map((src, i) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img key={i} src={src} alt="" className="size-8 rounded-full object-cover shadow-sm ring-2 ring-surface-container" />
@@ -136,7 +136,7 @@ export function Hero() {
               <p className="font-label text-caption text-on-surface-variant">Production-ready deployment in under 14 days</p>
             </div>
           </div>
-          <Button size="sm" asChild className="shrink-0"><a href="#consultation">Get Your Agent</a></Button>
+          <Button size="sm" asChild className="sm:shrink-0"><a href="#consultation">Get Your Agent</a></Button>
         </div>
       </Reveal>
     </section>

@@ -27,14 +27,14 @@ export function Header() {
       <Container className="flex h-20 items-center justify-between">
         <a href="#" aria-label="Synapse AI home"><BrandLogo /></a>
 
-        <nav aria-label="Primary" className="hidden items-center gap-space-xs rounded-full bg-surface-container-low/70 px-space-sm py-1.5 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-space-xs rounded-full bg-surface-container-low/70 px-space-sm py-1.5 xl:flex">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
               aria-current={active === l.href ? "page" : undefined}
               className={cn(
-                "rounded-full px-space-md py-1.5 font-label text-label-md transition-all duration-200",
+                "whitespace-nowrap rounded-full px-space-md py-1.5 font-label text-label-md transition-all duration-200",
                 active === l.href ? "bg-surface-container-high font-semibold text-on-surface" : "text-on-surface-variant hover:bg-surface-container-high/60 hover:text-on-surface",
               )}
             >
@@ -44,17 +44,17 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-space-md">
-          <a href="#" className="hidden font-label text-label-md text-on-surface-variant transition-colors hover:text-on-surface sm:inline-block">Sign in</a>
+          <a href="#" className="hidden whitespace-nowrap font-label text-label-md text-on-surface-variant transition-colors hover:text-on-surface sm:inline-block">Sign in</a>
           <Button asChild className="hidden sm:inline-flex"><a href="#consultation">Schedule Demo</a></Button>
           <span className="hidden size-8 items-center justify-center rounded-full bg-primary text-on-primary md:flex"><User className="size-[18px]" /></span>
-          <Button variant="secondary" size="icon" className="lg:hidden" aria-expanded={open} aria-label="Toggle menu" onClick={() => setOpen((o) => !o)}>
+          <Button variant="secondary" size="icon" className="xl:hidden" aria-expanded={open} aria-label="Toggle menu" onClick={() => setOpen((o) => !o)}>
             {open ? <X /> : <Menu />}
           </Button>
         </div>
       </Container>
 
       {/* Mobile menu */}
-      <div className={cn("grid overflow-hidden transition-all duration-300 lg:hidden", open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")}>
+      <div className={cn("grid overflow-hidden transition-all duration-300 xl:hidden", open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")}>
         <nav className="min-h-0">
           <Container className="flex flex-col gap-1 pb-space-lg">
             {navLinks.map((l) => (

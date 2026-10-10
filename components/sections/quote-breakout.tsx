@@ -11,14 +11,15 @@ export function QuoteBreakout() {
         <Reveal>
           <div className="group relative overflow-hidden rounded-xl shadow-xl">
             <div
-              className="relative flex min-h-[380px] flex-col justify-between gap-6 bg-cover bg-center p-8 transition-transform duration-[1200ms] ease-out group-hover:scale-[1.02] md:min-h-[420px] md:p-14"
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
               style={{ backgroundImage: `url("${images.quoteBackdrop}"), linear-gradient(135deg, #efdbff 0%, #dbb8ff 40%, #6ffbbe 100%)` }}
               role="img"
               aria-label="Soft pink petals blending into mint luminescence"
             />
-            <div className="absolute inset-0 flex flex-col justify-between gap-6 bg-gradient-to-t from-primary/40 via-transparent to-transparent p-8 md:p-14">
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/10 to-transparent" aria-hidden />
+            <div className="relative flex min-h-[380px] flex-col justify-between gap-6 p-6 sm:p-8 md:min-h-[420px] md:p-14">
               <Quote className="size-9 text-white/80" aria-hidden />
-              <blockquote className="max-w-2xl text-headline-md font-medium leading-snug text-white drop-shadow-md md:text-headline-lg">
+              <blockquote className="max-w-2xl text-body-lg font-medium leading-snug text-white drop-shadow-md sm:text-headline-md md:text-headline-lg">
                 “Synapse has made us completely available to our enterprise accounts. Now we have the cognitive scale to offer 24/7 intelligent workflows across all thirty global markets.”
               </blockquote>
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">

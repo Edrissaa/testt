@@ -24,7 +24,7 @@ export function Consultation() {
     <section id="consultation" className="py-20">
       <Container>
         <Reveal>
-          <Card elevation="float" className="p-8 md:p-14">
+          <Card elevation="float" className="p-6 sm:p-8 md:p-14">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
               <div className="space-y-6 lg:col-span-6">
                 <Badge variant="accent"><Zap className="size-4" />Priority Strategy Intake</Badge>
@@ -43,7 +43,7 @@ export function Consultation() {
                 </ul>
               </div>
 
-              <Card tone="low" elevation="raised" className="p-8 lg:col-span-6">
+              <Card tone="low" elevation="raised" className="p-5 sm:p-8 lg:col-span-6">
                 <form onSubmit={onSubmit} className="space-y-4">
                   <h3 className="mb-2 text-headline-sm text-on-surface">Claim Your AI Strategy Session</h3>
                   <p className="mb-4 text-body-sm text-on-surface-variant">Direct access with a Principal AI Systems Engineer. No sales scripts.</p>
